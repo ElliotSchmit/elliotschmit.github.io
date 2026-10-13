@@ -8,10 +8,11 @@
 
     <link rel="stylesheet" href="styles/main.css" />
 
+    <script src="scripts/vendors.js" defer></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
-<body>
+<body class="js-mouse">
     <header class="header" data-component="Header" data-header="fromTop">
         <div class="wrapper">
             <a href="index.html" class="logo">Elliot Schmit</a>
@@ -79,6 +80,8 @@
 
         </div>
     </header>
+
+    <div class="header__height"></div>
     <section class="section hero">
         <div class="wrapper">
             <div class="hero__content">
@@ -97,6 +100,7 @@
                 <img src="assets/images/hero.png" alt="" />
             </div>
         </div>
+        <!-- <canvas class="webgl" data-component="Experience"></canvas> -->
     </section>
 
     <section id="projets" class="section section-dark projets">
@@ -104,7 +108,7 @@
             <h1>Mes projets</h1>
 
             <div class="cards">
-                <a href="#" class="card">
+                <a href="scouts.html" class="card" data-component="Rotate">
                     <div class="card__media">
                         <img src="assets/images/scouts-thumbnail.jpeg" alt="" />
                     </div>
@@ -126,7 +130,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="card">
+                <a href="#" class="card" data-component="Rotate">
                     <div class="card__media">
                         <img src="assets/images/marche-thumbnail.jpeg" alt="" />
                     </div>
@@ -144,7 +148,7 @@
                     </div>
                 </a>
 
-                <a href="boxotel.html" class="card">
+                <a href="boxotel.html" class="card" data-component="Rotate">
                     <div class="card__media">
                         <img src="assets/images/boxotel-thumbnail.jpeg" alt="" />
                     </div>
@@ -165,7 +169,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="card">
+                <a href="#" class="card" data-component="Rotate">
                     <div class="card__media">
                         <img src="assets/images/aquarelle-thumbnail.jpg" alt="" />
                     </div>
@@ -184,7 +188,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="card">
+                <a href="#" class="card" data-component="Rotate">
                     <div class="card__media">
                         <img src="assets/images/walkman-thumbnail.jpg" alt="" />
                     </div>
@@ -207,7 +211,7 @@
 
     <section id="apropos" class="section apropos">
         <div class="wrapper">
-            <div class="apropos__media">
+            <div class="apropos__media" data-component="Rotate">
                 <img src="assets/images/apropos.jpg" alt="" />
             </div>
             <div class="apropos__content">
@@ -246,7 +250,7 @@
     <section class="section presentation">
         <div class="wrapper">
             <h1>Vidéo de présentation</h1>
-            <div class="video" data-component="YouTube" data-video-id="Em124IdaC-M">
+            <div class="video" data-component="YouTube" data-video-id="lsHveGRNXAA">
                 <div class="video__media js-video">
                     <img class="js-poster" src="assets/images/presentation.jpg" alt="Vidéo de présentation" />
 

@@ -398,6 +398,7 @@ body {
   color: var(--color-black);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* ==========================================================================
@@ -497,6 +498,10 @@ a {
      object-fit: cover;
 }
 
+.apropos__media {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
 .apropos__content {
   display: flex;
   flex-direction: column;
@@ -510,6 +515,7 @@ a {
   color: var(--color-white);
   background: var(--color-primary);
   box-shadow: 0 0 0 1px rgb(110, 134, 255) inset;
+  border: none;
   padding: 10px 20px;
   border-radius: 6px;
   font-family: var(--font-secondary);
@@ -593,6 +599,11 @@ a {
 }
 .competences .card:nth-child(4) ul {
   grid-template-columns: 1.25fr 1fr;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
 }
 
 .footer {
@@ -733,6 +744,10 @@ a {
   position: relative;
 }
 
+.header__height {
+  height: 76px;
+}
+
 .nav-primary {
   position: absolute;
   right: 0;
@@ -776,8 +791,12 @@ a {
   background-color: transparent;
   border: none;
   padding: 0;
-  transform: translateX(4.5px);
+  transform: translateX(4.5px) translateY(-6px);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;
+}
+.header__toggle:hover {
+  transform: translateX(4.5px) translateY(-1px);
 }
 .header__toggle .toggle__content {
   color: var(--color-white);
@@ -805,26 +824,49 @@ a {
   flex-direction: column;
   gap: var(--spacing-lg);
 }
+.nav-primary .nav a {
+  box-shadow: 0px 0px 0px 0px #fff4e9;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.nav-primary .nav a:hover {
+  box-shadow: 0px 2px 0px 0px #fff4e9;
+}
+
+.section.hero {
+  position: relative;
+  overflow: hidden;
+}
 
 .hero .wrapper {
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: var(--spacing-md);
   align-items: center;
+  height: 70vh;
 }
 .hero .wrapper .hero__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.hero .wrapper .hero__media {
+  height: 100%;
   width: 100%;
 }
 
 .hero-project {
   position: relative;
+  height: 90vh;
 }
 .hero-project .hero__content {
+  background: linear-gradient(90deg, rgba(34, 32, 31, 0.8) 0%, rgba(34, 32, 31, 0) 100%);
   position: absolute;
   width: 100%;
   height: 100%;
   color: var(--color-white);
   padding: 80px 0;
+  padding-top: 157px;
 }
 .hero-project .hero__content .wrapper {
   height: 100%;
@@ -837,10 +879,14 @@ a {
   align-items: center;
   gap: var(--spacing-sm);
 }
+.hero-project .hero__media {
+  height: 100%;
+}
 .hero-project .hero__details {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  width: 50%;
 }
 .hero-project .hero__details p {
   margin: 0;
@@ -854,6 +900,8 @@ a {
 .hero-project .hero__media img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
@@ -1065,7 +1113,7 @@ a {
 }
 .specifications .logicials {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--spacing-md);
 }
 
@@ -1084,6 +1132,11 @@ a {
   padding: var(--spacing-md);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.projets .card:hover .icon {
+  color: var(--color-primary);
+  transform: scale(1.5);
 }
 .projets .card:nth-child(1) {
   transform: rotate(7deg) translateY(60px);
@@ -1118,6 +1171,10 @@ a {
 .projets .card:nth-child(5) .timbre {
   transform: rotate(6deg);
 }
+.projets .card:hover {
+  scale: 1.05;
+  rotate: 0;
+}
 .projets .card .card__media {
   padding-right: var(--spacing-md);
 }
@@ -1143,6 +1200,7 @@ a {
   top: 0;
 }
 .projets .card .card__content .icon {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1191,6 +1249,11 @@ a {
   padding: var(--spacing-lg);
   padding-right: 0;
 }
+.steps .wrapper .step__content .step__number {
+  font-size: 4rem;
+  font-weight: 100;
+  margin: 0;
+}
 .steps .wrapper .step__media {
   position: absolute;
   right: 0;
@@ -1213,6 +1276,7 @@ a {
    ========================================================================== */
 .presentation {
   position: relative;
+  overflow: hidden;
 }
 .presentation h1 {
   text-align: center;
