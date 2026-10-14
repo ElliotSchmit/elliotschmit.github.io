@@ -752,7 +752,7 @@ a {
   position: absolute;
   right: 0;
   top: 130px;
-  transform: translateY(-100%);
+  transform: translateY(-101%);
   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   display: flex;
   flex-direction: column;
@@ -791,12 +791,12 @@ a {
   background-color: transparent;
   border: none;
   padding: 0;
-  transform: translateX(4.5px) translateY(-6px);
+  transform: translateY(-6px);
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;
 }
 .header__toggle:hover {
-  transform: translateX(4.5px) translateY(-1px);
+  transform: translateY(-1px);
 }
 .header__toggle .toggle__content {
   color: var(--color-white);
@@ -806,6 +806,12 @@ a {
   left: 0;
   width: 100%;
   text-align: center;
+}
+.header__toggle .icon {
+  height: 152px;
+  width: 78px;
+  color: var(--color-primary);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .nav-primary .nav {
@@ -1284,9 +1290,12 @@ a {
 }
 
 .film {
+  transition: all 0.3s;
   width: 100%;
   top: 25%;
   z-index: -1;
+  height: 287px;
+  background-image: url("../assets/images/film.jpg");
   transform: rotate(10deg) scale(1.05);
   position: absolute;
 }
