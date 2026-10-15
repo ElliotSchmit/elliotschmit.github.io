@@ -850,6 +850,11 @@ a {
   align-items: center;
   height: 70vh;
 }
+@media (width < 1024px) {
+  .hero .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .hero .wrapper .hero__media img {
   width: 100%;
   height: 100%;
