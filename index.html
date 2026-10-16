@@ -96,8 +96,10 @@
                     du design.
                 </p>
             </div>
+            <div class="hero__media">
+                <canvas class="webgl" data-component="Experience"></canvas>
+            </div>
         </div>
-        <canvas class="webgl" data-component="Experience"></canvas>
     </section>
 
     <section id="projets" class="section section-dark projets">
@@ -320,7 +322,13 @@
             </div>
         </div>
 
-        <div class="oeuvres-grid">
+        <div class="section interets-sticky">
+            <div class="wrapper">
+                <h1>Mes intérêts</h1>
+            </div>
+        </div>
+
+        <div class="oeuvres-grid js-gallery" data-component="Gallery">
             <div class="oeuvres-col">
                 <div class="oeuvre">
                     <img src="assets/images/chandelles.jpg" alt="Chandelles en mosaïques" />
@@ -343,7 +351,8 @@
                     <p>Couture de l'extérieur d'un sac en tissus recyclé</p>
                 </div>
             </div>
-            <div class="oeuvres-col">
+
+            <div class="oeuvres-col js-inverted">
                 <div class="oeuvre">
                     <img src="assets/images/abre.jpg" alt="Arbre, eau et maison" />
                     <p>Peinture à l'acrylique sur carton en supperposition</p>
@@ -353,18 +362,19 @@
                     <p>Tournage de bois d'une poivrière</p>
                 </div>
                 <div class="oeuvre">
-                    <img src="assets/images/portrait1.jpg" alt="" />
-                    <p>Portrait à la mine et au stylo</p>
+                    <img src="assets/images/excalibur.jpg" alt="" />
+                    <p>Construction d'une roche excalibur en mousse de plastique recyclé</p>
                 </div>
                 <div class="oeuvre">
                     <img src="assets/images/fleurs.jpg" alt="Quelques fleurs" />
                     <p>Pyrogravure sur bois</p>
                 </div>
                 <div class="oeuvre">
-                    <img src="assets/images/excalibur.jpg" alt="" />
-                    <p>Construction d'une roche excalibur en mousse de plastique recyclé</p>
+                    <img src="assets/images/portrait1.jpg" alt="" />
+                    <p>Portrait à la mine et au stylo</p>
                 </div>
             </div>
+            <div></div>
             <div class="oeuvres-col">
                 <div class="oeuvre">
                     <img src="assets/images/abstraite.jpg" alt="" />
@@ -428,9 +438,7 @@
                             <p>Votre formulaire a bien été envoyé.</p>
                         </div>
 
-                        <footer class="form__footer">
-                            <input type="submit" class="btn" value="Envoyer" />
-                        </footer>
+                        <footer class="form__footer"><button type="submit" class="btn">Envoyer</button></footer>
                     </div>
                 </form>
             </div>
