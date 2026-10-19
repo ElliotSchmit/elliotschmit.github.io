@@ -475,6 +475,9 @@ a {
   margin: 0 auto;
 }
 
+/* ==========================================================================
+   apprentissages / component
+   ========================================================================== */
 .apprentissages .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -482,11 +485,19 @@ a {
   gap: var(--spacing-md);
 }
 
+/* ==========================================================================
+   apropos / component
+   ========================================================================== */
 .apropos .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--spacing-lg);
+}
+@media (width < 768px) {
+  .apropos .wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 .apropos__media img {
@@ -501,16 +512,31 @@ a {
 .apropos__media {
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
+@media (width < 768px) {
+  .apropos__media {
+    width: 90%;
+    justify-self: center;
+  }
+}
 
 .apropos__content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
+@media (width < 768px) {
+  .apropos__content {
+    align-items: center;
+    text-align: center;
+  }
+}
 .apropos__content p {
   margin: 0;
 }
 
+/* ==========================================================================
+   buttons / component
+   ========================================================================== */
 .btn {
   color: var(--color-white);
   background: var(--color-primary);
@@ -546,11 +572,24 @@ a {
   transform: translateX(5px);
 }
 
+/* ==========================================================================
+   competences / component
+   ========================================================================== */
 .competences .cards {
   display: grid;
   grid-template-columns: 2fr 1.5fr;
   padding-top: var(--spacing-lg);
   justify-content: space-between;
+}
+@media (width < 1440px) {
+  .competences .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (width < 768px) {
+  .competences .cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .competences {
@@ -571,6 +610,13 @@ a {
   height: fit-content;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
+@media (width < 768px) {
+  .competences .card {
+    justify-self: center;
+    padding: var(--spacing-md);
+    background-position-x: -60px;
+  }
+}
 .competences .card ul {
   display: grid;
   gap: var(--spacing-md);
@@ -579,6 +625,11 @@ a {
   padding: 0;
   list-style-position: inside;
   padding-top: var(--spacing-lg);
+}
+@media (width < 1024px) {
+  .competences .card ul {
+    gap: var(--spacing-sm);
+  }
 }
 .competences .card:nth-child(1) {
   transform: rotate(2.5deg);
@@ -589,12 +640,33 @@ a {
 .competences .card:nth-child(2) {
   transform: rotate(0.5deg) translateX(-15%);
 }
+@media (width < 1440px) {
+  .competences .card:nth-child(2) {
+    transform: rotate(0.5deg) translateX(-5%);
+  }
+}
+@media (width < 768px) {
+  .competences .card:nth-child(2) {
+    transform: rotate(0.5deg);
+    order: -1;
+  }
+}
 .competences .card:nth-child(2) ul {
   display: flex;
   list-style: none;
 }
 .competences .card:nth-child(3) {
   transform: rotate(-5deg) translateX(25%);
+}
+@media (width < 1024px) {
+  .competences .card:nth-child(3) {
+    transform: rotate(-5deg) translateY(10%) translateX(0);
+  }
+}
+@media (width < 768px) {
+  .competences .card:nth-child(3) {
+    transform: rotate(-5deg) translateY(0) translateX(0);
+  }
 }
 .competences .card:nth-child(3) ul {
   display: flex;
@@ -603,13 +675,33 @@ a {
 .competences .card:nth-child(4) {
   transform: rotate(4deg) translateY(-20%) translateX(40%);
 }
+@media (width < 1440px) {
+  .competences .card:nth-child(4) {
+    transform: rotate(4deg) translateY(-20%) translateX(30%);
+  }
+}
+@media (width < 1024px) {
+  .competences .card:nth-child(4) {
+    transform: rotate(4deg) translateY(-40%) translateX(10%);
+  }
+}
+@media (width < 768px) {
+  .competences .card:nth-child(4) {
+    transform: rotate(4deg) translateY(0) translateX(0);
+  }
+}
 .competences .card:nth-child(4) ul {
   grid-template-columns: 1.25fr 1fr;
 }
 
+/* ==========================================================================
+   footer / component
+   ========================================================================== */
 .footer {
   background-color: var(--color-bg-secondary);
   padding: 20px 0;
+  position: relative;
+  z-index: 1;
 }
 .footer p {
   margin: 0;
@@ -620,6 +712,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: var(--spacing-md);
+}
+@media (width < 480px) {
+  .footer__content {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
 }
 .footer__content ul {
   display: flex;
@@ -631,6 +730,9 @@ a {
   padding: 0;
 }
 
+/* ==========================================================================
+   form / component
+   ========================================================================== */
 .contact .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -647,6 +749,7 @@ a {
   background-color: var(--color-white);
   position: relative;
   z-index: 1;
+  display: none;
 }
 
 .form {
@@ -740,6 +843,9 @@ a {
   display: inline;
 }
 
+/* ==========================================================================
+   header / component
+   ========================================================================== */
 .header {
   padding: var(--spacing-md) 0;
   background: var(--color-bg-secondary);
@@ -845,6 +951,9 @@ a {
   box-shadow: 0px 2px 0px 0px #fff4e9;
 }
 
+/* ==========================================================================
+   hero / component
+   ========================================================================== */
 .section.hero {
   position: relative;
   overflow: hidden;
@@ -932,6 +1041,9 @@ a {
   display: block;
 }
 
+/* ==========================================================================
+   hub / component
+   ========================================================================== */
 .hub {
   display: flex;
   align-items: center;
@@ -1063,6 +1175,9 @@ a {
   width: 6em;
 }
 
+/* ==========================================================================
+   interets / component
+   ========================================================================== */
 .section.interets__content {
   position: sticky;
   z-index: 2;
@@ -1083,6 +1198,11 @@ a {
   width: 100%;
   z-index: 1;
 }
+@media (width < 768px) {
+  .interets-sticky {
+    display: none;
+  }
+}
 
 .oeuvres-grid {
   display: grid;
@@ -1090,6 +1210,26 @@ a {
   gap: var(--spacing-md);
   position: relative;
   overflow: hidden;
+}
+@media (width < 1024px) {
+  .oeuvres-grid {
+    gap: var(--spacing-sm);
+  }
+}
+@media (width < 768px) {
+  .oeuvres-grid {
+    display: none;
+  }
+}
+
+.oeuvres-grid-mobile {
+  display: none;
+}
+@media (width < 768px) {
+  .oeuvres-grid-mobile {
+    display: flex;
+    width: 400vw;
+  }
 }
 
 .oeuvres-col {
@@ -1105,6 +1245,14 @@ a {
   padding: 0 12px;
 }
 
+.oeuvres-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
 .oeuvre {
   position: relative;
 }
@@ -1115,7 +1263,7 @@ a {
   padding: 10px;
   margin: 0;
   width: 100%;
-  background: linear-gradient(0deg, rgb(34, 32, 31) 0%, rgba(34, 32, 31, 0) 100%);
+  background: linear-gradient(0deg, rgb(58, 55, 53) 0%, rgba(58, 55, 53, 0) 100%);
 }
 .oeuvre img {
   width: 100%;
@@ -1125,6 +1273,9 @@ a {
   display: block;
 }
 
+/* ==========================================================================
+   mediassup / component
+   ========================================================================== */
 .section.medias-sup {
   padding-bottom: 0;
 }
@@ -1155,6 +1306,9 @@ a {
   grid-row: 5/7;
 }
 
+/* ==========================================================================
+   processus / component
+   ========================================================================== */
 .specifications {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1170,6 +1324,9 @@ a {
   gap: var(--spacing-md);
 }
 
+/* ==========================================================================
+   projets / component
+   ========================================================================== */
 .projets .cards {
   display: flex;
   flex-direction: column;
@@ -1187,22 +1344,34 @@ a {
   color: var(--color-black);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   width: 66%;
+  padding: var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.projets .card .timbre {
+  position: absolute;
+  right: var(--spacing-md);
+  top: var(--spacing-md);
+}
+@media (width < 768px) {
+  .projets .card .timbre {
+    right: var(--spacing-sm);
+    top: var(--spacing-sm);
+  }
 }
 @media (width < 1024px) {
   .projets .card {
     width: 75%;
   }
 }
-@media (width < 1024px) {
+@media (width < 768px) {
   .projets .card {
-    width: 100%;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr;
+    align-self: center;
   }
-}
-.projets .card {
-  padding: var(--spacing-md);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .projets .card:hover .icon {
   color: var(--color-primary);
@@ -1211,6 +1380,11 @@ a {
 .projets .card:nth-child(1) {
   transform: rotate(7deg) translateY(60px);
   align-self: flex-end;
+}
+@media (width < 768px) {
+  .projets .card:nth-child(1) {
+    align-self: center;
+  }
 }
 .projets .card:nth-child(1) .timbre {
   transform: rotate(10deg);
@@ -1225,6 +1399,11 @@ a {
   transform: rotate(4deg);
   align-self: flex-end;
 }
+@media (width < 768px) {
+  .projets .card:nth-child(3) {
+    align-self: center;
+  }
+}
 .projets .card:nth-child(3) .timbre {
   transform: rotate(2deg);
 }
@@ -1238,6 +1417,11 @@ a {
   transform: rotate(2deg) translateY(-60px);
   align-self: flex-end;
 }
+@media (width < 768px) {
+  .projets .card:nth-child(5) {
+    align-self: center;
+  }
+}
 .projets .card:nth-child(5) .timbre {
   transform: rotate(6deg);
 }
@@ -1248,12 +1432,23 @@ a {
 .projets .card .card__media {
   padding-right: var(--spacing-md);
 }
+@media (width < 768px) {
+  .projets .card .card__media {
+    padding-right: 0;
+    padding-bottom: var(--spacing-md);
+  }
+}
 .projets .card .card__media img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 8/9;
+}
+@media (width < 768px) {
+  .projets .card .card__media img {
+    aspect-ratio: 5/3;
+  }
 }
 .projets .card .card__content {
   padding-left: var(--spacing-md);
@@ -1264,10 +1459,13 @@ a {
   justify-content: center;
   gap: var(--spacing-md);
 }
-.projets .card .card__content img {
-  position: absolute;
-  right: 0;
-  top: 0;
+@media (width < 768px) {
+  .projets .card .card__content {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--color-black);
+    padding-top: var(--spacing-md);
+  }
 }
 .projets .card .card__content .icon {
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1290,6 +1488,9 @@ a {
   background-color: var(--color-bg-secondary);
 }
 
+/* ==========================================================================
+   sections / component
+   ========================================================================== */
 .section {
   padding: 80px 0;
 }
@@ -1304,6 +1505,9 @@ a {
   color: var(--color-white);
 }
 
+/* ==========================================================================
+   steps / component
+   ========================================================================== */
 .steps {
   padding: 25vh 0;
 }
@@ -1355,6 +1559,7 @@ a {
   z-index: 5;
   padding: 13px;
   background-color: var(--color-bg-secondary);
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .steps .wrapper .step__media img:nth-child(2) {
   transform: rotate(3.4deg);
@@ -1389,13 +1594,21 @@ a {
 
 .film {
   transition: all 0.3s;
-  width: 100%;
+  width: 110%;
   top: 25%;
+  left: -20px;
   z-index: -1;
   height: 287px;
   background-image: url("../assets/images/film.jpg");
+  background-size: contain;
+  background-repeat: repeat-x;
   transform: rotate(10deg) scale(1.05);
   position: absolute;
+}
+@media (width < 1024px) {
+  .film {
+    height: 150px;
+  }
 }
 
 .video {
