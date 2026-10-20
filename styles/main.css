@@ -27,7 +27,7 @@
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Gloock', serif;
   --font-size-content: clamp(1rem, 0.21vw + 0.94rem, 1.13rem);
-  --font-size-h1: clamp(2.5rem, 2.5vw + 1.75rem, 4rem);
+  --font-size-h1: clamp(2.19rem, 3.02vw + 1.28rem, 4rem);
   --font-size-h2: clamp(1.88rem, 2.08vw + 1.25rem, 3.13rem);
 }
 
@@ -483,6 +483,11 @@ a {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--spacing-md);
+}
+@media (width < 1024px) {
+  .apprentissages .wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================
@@ -1299,6 +1304,16 @@ a {
   gap: var(--spacing-md);
   padding-top: var(--spacing-lg);
 }
+@media (width < 1024px) {
+  .medias {
+    gap: var(--spacing-sm);
+  }
+}
+@media (width < 768px) {
+  .medias {
+    gap: var(--spacing-xs);
+  }
+}
 .medias img {
   width: 100%;
   height: 100%;
@@ -1482,6 +1497,7 @@ a {
 @media (width < 768px) {
   .projets .card .card__media {
     padding-right: 0;
+    aspect-ratio: 1/1;
   }
 }
 .projets .card .card__media img {
@@ -1493,7 +1509,7 @@ a {
 }
 @media (width < 768px) {
   .projets .card .card__media img {
-    aspect-ratio: 5/3;
+    aspect-ratio: 1/1;
   }
 }
 .projets .card .card__content {
@@ -1554,6 +1570,12 @@ a {
    ========================================================================== */
 .steps {
   padding: 25vh 0;
+  overflow: hidden;
+}
+@media (width < 1024px) {
+  .steps {
+    padding: 50vh 0 25vh;
+  }
 }
 
 .steps .wrapper {
@@ -1575,6 +1597,11 @@ a {
   padding-right: var(--spacing-md);
   width: 50%;
 }
+@media (width < 1024px) {
+  .steps .wrapper .step__content {
+    width: 100%;
+  }
+}
 .steps .wrapper .step__content .step__number {
   font-size: 4rem;
   font-weight: 100;
@@ -1583,15 +1610,37 @@ a {
 .steps .wrapper .step {
   position: relative;
   background-color: var(--color-bg-dark);
-  min-height: 422px;
+  min-height: 450px;
+  margin: auto 0;
   width: 100%;
 }
 .steps .wrapper .step__media {
   position: absolute;
   right: 0;
-  top: center;
+  top: -7%;
   height: 125%;
   width: 50%;
+}
+@media (width < 1024px) {
+  .steps .wrapper .step__media {
+    width: 65%;
+    left: 20%;
+    top: -60%;
+  }
+}
+@media (width < 768px) {
+  .steps .wrapper .step__media {
+    width: 75%;
+    left: 15%;
+    top: -60%;
+  }
+}
+@media (width < 480px) {
+  .steps .wrapper .step__media {
+    width: 90%;
+    left: 5%;
+    top: -50%;
+  }
 }
 .steps .wrapper .step__media img {
   position: absolute;
