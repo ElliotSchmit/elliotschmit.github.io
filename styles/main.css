@@ -850,7 +850,7 @@ a {
   padding: var(--spacing-md) 0;
   background: var(--color-bg-secondary);
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 4;
 }
 .header .wrapper {
@@ -1002,7 +1002,6 @@ a {
   height: 100%;
   color: var(--color-white);
   padding: 80px 0;
-  padding-top: 157px;
 }
 .hero-project .hero__content .wrapper {
   height: 100%;
@@ -1024,6 +1023,17 @@ a {
   gap: var(--spacing-md);
   width: 50%;
 }
+@media (width < 768px) {
+  .hero-project .hero__details {
+    width: 75%;
+  }
+}
+@media (width < 480px) {
+  .hero-project .hero__details {
+    width: 100%;
+    align-items: center;
+  }
+}
 .hero-project .hero__details p {
   margin: 0;
 }
@@ -1038,6 +1048,8 @@ a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
   display: block;
 }
 
@@ -1307,6 +1319,36 @@ a {
 }
 
 /* ==========================================================================
+   modale / component
+   ========================================================================== */
+.modale {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  background-color: rgba(34, 32, 31, 0.5);
+}
+.modale .wrapper {
+  height: 100%;
+}
+.modale img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.modale-is-active .modale {
+  display: block;
+}
+.modale-is-active body {
+  overflow: hidden;
+}
+
+/* ==========================================================================
    processus / component
    ========================================================================== */
 .specifications {
@@ -1314,6 +1356,11 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-md);
   padding-top: var(--spacing-lg);
+}
+@media (width < 1024px) {
+  .specifications {
+    grid-template-columns: 1fr;
+  }
 }
 .specifications h2 {
   padding-bottom: var(--spacing-md);
@@ -1356,8 +1403,7 @@ a {
 }
 @media (width < 768px) {
   .projets .card .timbre {
-    right: var(--spacing-sm);
-    top: var(--spacing-sm);
+    display: none;
   }
 }
 @media (width < 1024px) {
@@ -1369,7 +1415,8 @@ a {
   .projets .card {
     width: 90%;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 2fr;
+    grid-template-rows: 4fr 1fr;
+    gap: var(--spacing-md);
     align-self: center;
   }
 }
@@ -1435,7 +1482,6 @@ a {
 @media (width < 768px) {
   .projets .card .card__media {
     padding-right: 0;
-    padding-bottom: var(--spacing-md);
   }
 }
 .projets .card .card__media img {
@@ -1463,8 +1509,6 @@ a {
   .projets .card .card__content {
     border-left: none;
     padding-left: 0;
-    border-top: 1px solid var(--color-black);
-    padding-top: var(--spacing-md);
   }
 }
 .projets .card .card__content .icon {
@@ -1522,7 +1566,8 @@ a {
   top: 0;
   left: 0;
   transform: translateY(100%);
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
@@ -1538,13 +1583,13 @@ a {
 .steps .wrapper .step {
   position: relative;
   background-color: var(--color-bg-dark);
-  height: 422px;
+  min-height: 422px;
   width: 100%;
 }
 .steps .wrapper .step__media {
   position: absolute;
   right: 0;
-  top: -13%;
+  top: center;
   height: 125%;
   width: 50%;
 }
