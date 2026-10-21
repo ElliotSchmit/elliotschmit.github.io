@@ -475,6 +475,50 @@ a {
   margin: 0 auto;
 }
 
+.quatre .wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  height: 100%;
+}
+@media (width < 768px) {
+  .quatre .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quatre {
+  height: calc(100vh - 230px);
+}
+
+.quatre__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+.quatre__content .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.quatre__media {
+  display: flex;
+  justify-content: center;
+}
+.quatre__media img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+@media (width < 768px) {
+  .quatre__media {
+    order: -1;
+    height: 50%;
+  }
+}
+
 /* ==========================================================================
    apprentissages / component
    ========================================================================== */
@@ -1008,6 +1052,11 @@ a {
   color: var(--color-white);
   padding: 80px 0;
 }
+@media (width < 480px) {
+  .hero-project .hero__content {
+    text-align: center;
+  }
+}
 .hero-project .hero__content .wrapper {
   height: 100%;
   display: flex;
@@ -1053,8 +1102,8 @@ a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 100%;
-     object-position: 50% 100%;
+  -o-object-position: 65% 50%;
+     object-position: 65% 50%;
   display: block;
 }
 
