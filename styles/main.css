@@ -475,50 +475,6 @@ a {
   margin: 0 auto;
 }
 
-.quatre .wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-lg);
-  height: 100%;
-}
-@media (width < 768px) {
-  .quatre .wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-
-.quatre {
-  height: calc(100vh - 230px);
-}
-
-.quatre__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-}
-.quatre__content .btn {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.quatre__media {
-  display: flex;
-  justify-content: center;
-}
-.quatre__media img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 100%;
-}
-@media (width < 768px) {
-  .quatre__media {
-    order: -1;
-    height: 50%;
-  }
-}
-
 /* ==========================================================================
    apprentissages / component
    ========================================================================== */
@@ -1595,6 +1551,50 @@ a {
   padding: 5px 10px;
   border-radius: 6px;
   background-color: var(--color-bg-secondary);
+}
+
+.quatre .wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  height: 100%;
+}
+@media (width < 768px) {
+  .quatre .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quatre {
+  height: calc(100vh - 230px);
+}
+
+.quatre__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+.quatre__content .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.quatre__media {
+  display: flex;
+  justify-content: center;
+}
+.quatre__media img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+@media (width < 768px) {
+  .quatre__media {
+    order: -1;
+    height: 50%;
+  }
 }
 
 /* ==========================================================================
