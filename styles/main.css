@@ -1455,6 +1455,12 @@ a {
     align-self: center;
   }
 }
+@media (width < 480px) {
+  .projets .card {
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+}
 .projets .card:hover .icon {
   color: var(--color-primary);
   transform: scale(1.5);
@@ -1547,6 +1553,11 @@ a {
   .projets .card .card__content {
     border-left: none;
     padding-left: 0;
+  }
+}
+@media (width < 480px) {
+  .projets .card .card__content {
+    gap: var(--spacing-sm);
   }
 }
 .projets .card .card__content .icon {
