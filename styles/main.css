@@ -1592,8 +1592,7 @@ a {
 }
 @media (width < 768px) {
   .quatre__media {
-    order: -1;
-    height: 50%;
+    display: none;
   }
 }
 
