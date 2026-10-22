@@ -1359,8 +1359,20 @@ a {
   z-index: 10;
   background-color: rgba(34, 32, 31, 0.5);
 }
+.modale .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--color-white);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.modale .icon:hover {
+  transform: scale(1.1);
+  color: var(--color-primary);
+}
 .modale .wrapper {
   height: 100%;
+  position: relative;
 }
 .modale img {
   height: 100%;
