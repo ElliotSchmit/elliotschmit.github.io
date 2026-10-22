@@ -552,6 +552,9 @@ a {
   font-family: var(--font-secondary);
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
+.btn:hover {
+  transform: scale(1.05);
+}
 
 .btn-secondary {
   color: var(--color-primary);
@@ -734,6 +737,13 @@ a {
   margin: 0;
   padding: 0;
 }
+.footer__content li {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.footer__content li:hover {
+  transform: scale(1.1);
+  color: var(--color-black);
+}
 
 /* ==========================================================================
    form / component
@@ -912,6 +922,7 @@ a {
   transform: translateY(-6px);
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;
+  cursor: pointer;
 }
 .header__toggle:hover {
   transform: translateY(-1px);
@@ -1361,6 +1372,10 @@ a {
      object-fit: contain;
 }
 
+[data-component=Modale] {
+  cursor: pointer;
+}
+
 .modale-is-active .modale {
   display: block;
 }
@@ -1434,8 +1449,8 @@ a {
 @media (width < 768px) {
   .projets .card {
     width: 90%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-md);
     align-self: center;
   }
@@ -1682,9 +1697,9 @@ a {
 }
 @media (width < 1024px) {
   .steps .wrapper .step__media {
-    width: 65%;
+    width: 60%;
     left: 20%;
-    top: -60%;
+    top: -75%;
   }
 }
 @media (width < 768px) {
