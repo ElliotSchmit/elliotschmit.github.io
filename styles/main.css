@@ -417,21 +417,18 @@ h6 {
 }
 
 h1,
-.h1 {
+.h1,
+h2 {
   font-size: var(--font-size-h1);
   text-transform: uppercase;
 }
 
-h2 {
+h3 {
   font-size: var(--font-size-h2);
 }
 
-h3 {
-  font-size: var(--font-size-h3);
-}
-
 h4 {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h3);
 }
 
 h5 {
@@ -1397,7 +1394,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
-.specifications h2 {
+.specifications h3 {
   padding-bottom: var(--spacing-md);
 }
 .specifications .logicials {
@@ -1766,7 +1763,7 @@ a {
   background-color: var(--color-white);
   z-index: 1;
 }
-.presentation h1 {
+.presentation h2 {
   text-align: center;
   padding-bottom: var(--spacing-lg);
 }
