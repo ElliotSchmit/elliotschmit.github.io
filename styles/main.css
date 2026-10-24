@@ -1004,11 +1004,33 @@ a {
 .hero .wrapper .hero__media {
   height: 70vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 @media (width < 1024px) {
   .hero .wrapper .hero__media {
     order: -1;
     height: 40vh;
+  }
+}
+@media (width < 768px) {
+  .hero .wrapper .hero__media {
+    height: unset;
+  }
+}
+@media (width < 768px) {
+  .hero .wrapper .hero__media .webgl {
+    display: none;
+  }
+}
+.hero .wrapper .hero__media .media__mobile {
+  display: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (width < 768px) {
+  .hero .wrapper .hero__media .media__mobile {
+    display: block;
   }
 }
 
