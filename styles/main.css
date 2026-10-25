@@ -514,6 +514,11 @@ a {
 .apropos__media {
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
+.apropos__media img {
+  padding: var(--spacing-md);
+  padding-bottom: 140px;
+  background-color: var(--color-bg-secondary);
+}
 @media (width < 768px) {
   .apropos__media {
     width: 90%;
@@ -1017,6 +1022,9 @@ a {
   .hero .wrapper .hero__media {
     height: unset;
   }
+}
+.hero .wrapper .hero__media .webgl-container {
+  width: 100%;
 }
 @media (width < 768px) {
   .hero .wrapper .hero__media .webgl {
