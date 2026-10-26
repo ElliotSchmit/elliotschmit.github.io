@@ -401,6 +401,10 @@ body {
   position: relative;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ==========================================================================
    HEADINGS / ELEMENT
    ========================================================================== */
@@ -463,6 +467,10 @@ a {
   text-decoration: none;
 }
 
+span {
+  cursor: pointer;
+}
+
 /* ==========================================================================
    WRAPPER / ELEMENT
    ========================================================================== */
@@ -516,7 +524,7 @@ a {
 }
 .apropos__media img {
   padding: var(--spacing-md);
-  padding-bottom: 140px;
+  padding-bottom: 124px;
   background-color: var(--color-bg-secondary);
 }
 @media (width < 768px) {
@@ -897,7 +905,8 @@ a {
   align-items: flex-end;
   z-index: 5;
 }
-.nav-primary a {
+.nav-primary a,
+.nav-primary span {
   display: block;
   height: 100%;
   width: 100%;
@@ -914,7 +923,8 @@ a {
   flex-direction: column;
   gap: var(--spacing-md);
 }
-.nav-primary .socials a {
+.nav-primary .socials a,
+.nav-primary .socials span {
   display: flex;
   gap: var(--spacing-sm);
   align-items: center;
@@ -969,11 +979,13 @@ a {
   flex-direction: column;
   gap: var(--spacing-lg);
 }
-.nav-primary .nav a {
+.nav-primary .nav a,
+.nav-primary .nav span {
   box-shadow: 0px 0px 0px 0px #fff4e9;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.nav-primary .nav a:hover {
+.nav-primary .nav a:hover,
+.nav-primary .nav span:hover {
   box-shadow: 0px 2px 0px 0px #fff4e9;
 }
 
@@ -1001,10 +1013,18 @@ a {
     grid-template-columns: 1fr;
   }
 }
+.hero .wrapper .hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
 @media (width < 1024px) {
   .hero .wrapper .hero__content {
     text-align: center;
   }
+}
+.hero .wrapper .hero__content p {
+  margin: 0;
 }
 .hero .wrapper .hero__media {
   height: 70vh;
@@ -1387,6 +1407,16 @@ a {
 /* ==========================================================================
    modale / component
    ========================================================================== */
+@keyframes modaleAnim {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .modale {
   display: none;
   position: fixed;
@@ -1433,6 +1463,11 @@ a {
 
 .modale-is-active .modale {
   display: block;
+}
+.modale-is-active .modale img,
+.modale-is-active .modale iframe {
+  animation-name: modaleAnim;
+  animation-duration: 0.4s;
 }
 .modale-is-active body {
   overflow: hidden;
@@ -1731,11 +1766,13 @@ a {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: var(--spacing-md);
   padding: var(--spacing-lg);
   padding-right: var(--spacing-md);
   width: 50%;
+  height: 450px;
 }
 @media (width < 1024px) {
   .steps .wrapper .step__content {
@@ -1814,6 +1851,28 @@ a {
 .steps .wrapper .step__media img:nth-child(5) {
   transform: rotate(3.56deg);
   z-index: 1;
+}
+
+body {
+  overflow: hidden;
+}
+
+.transition {
+  transition: all 0.6s;
+  transform: translateY(0);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: var(--color-bg-secondary);
+}
+.transition .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==========================================================================
