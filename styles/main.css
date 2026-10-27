@@ -720,6 +720,21 @@ span {
   grid-template-columns: 1.25fr 1fr;
 }
 
+.dessin {
+  background-color: var(--color-white);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
+
+.dessin__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* ==========================================================================
    footer / component
    ========================================================================== */
@@ -1269,7 +1284,7 @@ span {
 .section.interets__content {
   position: sticky;
   z-index: 2;
-  top: 75px;
+  top: 70px;
   background: linear-gradient(0deg, rgba(58, 55, 53, 0) 0%, rgb(58, 55, 53) 100%);
 }
 
