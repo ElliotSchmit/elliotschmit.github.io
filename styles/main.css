@@ -724,7 +724,7 @@ span {
   background-color: var(--color-white);
   position: relative;
   z-index: 2;
-  display: flex;
+  display: none;
   align-items: center;
   height: 50vh;
 }
