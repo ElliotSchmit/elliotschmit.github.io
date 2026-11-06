@@ -1387,6 +1387,7 @@ span {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 100vh;
   gap: var(--spacing-md);
   padding-top: var(--spacing-lg);
 }
@@ -1617,6 +1618,12 @@ span {
 }
 .projets .card:nth-child(5) .timbre {
   transform: rotate(6deg);
+}
+.projets .card:nth-child(6) {
+  transform: rotate(-1.7deg) translateY(-60px);
+}
+.projets .card:nth-child(6) .timbre {
+  transform: rotate(-2deg);
 }
 .projets .card:hover {
   scale: 1.05;

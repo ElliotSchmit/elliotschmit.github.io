@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elliot Schmit - Porfolio - Profil multidisciplinaire</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6003DF8JM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y6003DF8JM');
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="scripts/vendors.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body class="js-mouse">
+    <div class="transition section">
+        <div class="wrapper">
+            <img src="assets/images/camera.png" alt="">
+        </div>
+    </div>
+
+    <div class="section modale js-modale">
+        <div class="wrapper">
+            <svg class="icon icon--lg js-x">
+                <use class="js-icon" href="#icon-x"></use>
+            </svg>
+            <div class="js-video"></div>
+        </div>
+    </div>
+
+    <header class="header" data-component="Header" data-header="fromTop">
+        <div class="wrapper">
+            <span onclick="transitionToPage('index.html')" class="logo">Elliot Schmit</span>
+
+            <nav class="nav-primary">
+                <ul class="nav js-nav">
+                    <li>
+                        <span onclick="transitionToPage('index.html#')" class="nav-primary__item">Accueil</span>
+                    </li>
+                    <li>
+                        <span onclick="transitionToPage('index.html#projets')" class="nav-primary__item">Mes projets</span>
+                    </li>
+                    <li>
+                        <span onclick="transitionToPage('index.html#apropos')" class="nav-primary__item">À propos</span>
+                    </li>
+
+                    <li>
+                        <ul class="socials">
+                            <li>
+                                <a href="https://www.instagram.com/elliotschmit/" target="_blank">
+                                    <svg class="icon">
+                                        <use href="#icon-instagram"></use>
+                                    </svg>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://youtube.com/@elliotschmit?si=RR1Z4JjvS5XWAOOx" target="_blank">
+                                    <svg class="icon">
+                                        <use href="#icon-youtube"></use>
+                                    </svg>
+                                    Youtube
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/ElliotSchmit" target="_blank">
+                                    <svg class="icon">
+                                        <use href="#icon-github"></use>
+                                    </svg>
+                                    Github
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/elliot-schmit-5372b1441/" target="_blank">
+                                    <svg class="icon">
+                                        <use href="#icon-linkedin"></use>
+                                    </svg>
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button class="header__toggle js-toggle">
+                    <div class="toggle__media">
+                        <svg class="icon icon--xl">
+                            <use href="#icon-signet"></use>
+                        </svg>
+                    </div>
+                    <div class="toggle__content">
+                        <p>Menu</p>
+                    </div>
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="header__height"></div>
+    <section class="hero-project">
+        <div class="hero__content">
+            <div class="wrapper">
+                <span onclick="transitionToPage('index.html#projets')" class="retour">
+                    <svg class="icon icon--lg">
+                        <use href="#icon-chevron-left"></use>
+                    </svg>
+                    Retour aux projets
+                </span>
+
+                <div class="hero__details">
+                    <h1>Panik! à l'entrepôt</h1>
+                    <p>TouchDesigner et bande led</p>
+                    <div class="btns">
+                        <a href="https://github.com/ElliotSchmit/refonte-boxotel" class="btn" target="_blank">Voir sur GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__media">
+            <img src="assets/images/panik-hero.jpg" alt="" />
+        </div>
+    </section>
+
+    <section class="section processus">
+        <div class="wrapper">
+            <h2>Processus</h2>
+
+            <div class="specifications">
+                <div class="specification">
+                    <h3>Contexte</h3>
+                    <p>
+                        Ce projet a été conçu dans le cadre du cours de média interactif. Nous avions comme objectif de créer un jeu en 1D, sur une bande LED. Nous
+                        avons décidé de créer un jeu multijoueur où un des joueur doit chasser l'autre.
+                    </p>
+                </div>
+
+                <div class="specification">
+                    <h3>Rôles et crédits</h3>
+                    <p>
+                        Ce projet a été créé en équipe avec Alyx Loyer. Pour ma part j'ai réalisé les contrôles du personnage jaune ainsi que la logique de
+                        l'apparition des objets et de leur collecte. La trame sonore provient quant à elle de Pixabay.
+                    </p>
+                    <p>Aucune intelligence artificielle n’a été utilisée pour ce projet.</p>
+                </div>
+
+                <div class="specification">
+                    <h3>Logiciels et languages</h3>
+                    <div class="logicials">
+                        <img src="assets/images/touchdesigner.png" alt="TouchDesigner" />
+                        <img src="assets/images/python.png" alt="Python" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section steps" data-component="Scroller" data-pin-items="true">
+        <div class="wrapper">
+            <div class="step js-step">
+                <div class="step__content pinned">
+                    <p class="step__number">1.</p>
+                    <h3>Idéation du projet</h3>
+                    <p>
+                        La première étape de ce projet a été de trouver une idée de concept de jeu. Après mûre réflexion, nous avons opté pour un jeu à deux
+                        joueurs. Une fois son fonctionnement trouvé, nous nous sommes décidés pour le nom Panik! à l'entrepôt.
+                    </p>
+                </div>
+                <div class="step__content pinned">
+                    <p class="step__number">2.</p>
+                    <h3>Création du personnage</h3>
+                    <p>Ensuite, il a fallut débuter la réalisation le jeu. Pour se faire de mon côté, j'ai créé le personnage jaune ainsi que ses contrôles.</p>
+                </div>
+                <div class="step__content pinned">
+                    <p class="step__number">3.</p>
+                    <h3>Ajout de la collecte d'objets</h3>
+                    <p>Une fois le personnage créé, j'ai ensuite réalisé la logique derrière l'apparition d'objets à collecter ainsi que leur récolte.</p>
+                </div>
+                <div class="step__content pinned">
+                    <p class="step__number">4.</p>
+                    <h3>Création d'une manette</h3>
+                    <p>
+                        J'ai créé la manette à l'aide d'une impression 3D pour le couvercle et du carton et de la peinture pour la boîte. J'ai dû calculer la taille
+                        nécessaire pour l'insertion de boutons. Nous avons ensuite assemblé le tout, ce qui a permis de finaliser le projet.
+                    </p>
+                </div>
+                <div class="step__content pinned">
+                    <p class="step__number">5.</p>
+                    <h3>Présentation en classe</h3>
+                    <p>Une fois le projet complété, il a été présenté en classe et mis à disposition des autres élèves afin qu'ils puissent y jouer.</p>
+                </div>
+                <div class="step__media js-imgs">
+                    <img class="js-img" src="assets/images/panik-step-1.jpg" alt="" data-component="Modale" />
+                    <img class="js-img" src="assets/images/panik-step-2.jpg" alt="" data-component="Modale" />
+                    <img class="js-img" src="assets/images/panik-step-3.jpg" alt="" data-component="Modale" />
+                    <img class="js-img" src="assets/images/panik-step-4.jpg" alt="" data-component="Modale" />
+                    <img class="js-img" src="assets/images/panik-step-5.jpg" alt="" data-component="Modale" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section medias-sup">
+        <div class="wrapper">
+            <h2>Médias supplémentaires</h2>
+        </div>
+        <div class="medias">
+            <img src="assets/images/panik-son.jpg" alt="" data-component="Modale" />
+            <img src="assets/images/panik-code.jpg" alt="" data-component="Modale" />
+            <img src="assets/images/panik-joueur.jpg" alt="" data-component="Modale" />
+            <img src="assets/images/panik-select.jpg" alt="" data-component="Modale" />
+        </div>
+    </section>
+
+    <section class="section apprentissages">
+        <div class="wrapper">
+            <h2>Mes apprentissages</h2>
+            <p>
+                Ce projet m’a permis d'en apprendre d'avantage sur la programmation dans TouchDesigner en plus de pouvoir interagir avec de vrais éléments tels que
+                des boutons et des lumières.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__content">
+                <span onclick="transitionToPage('index.html#projets')" class="logo">Elliot Schmit</span>
+                <ul class="socials">
+                    <li><a href="https://www.instagram.com/elliotschmit/" target="_blank"><svg class="icon icon--lg" aria-label="Instagram">
+                                <use href="#icon-instagram"></use>
+                            </svg></a></li>
+                    <li><a href="https://youtube.com/@elliotschmit?si=RR1Z4JjvS5XWAOOx" target="_blank"><svg class="icon icon--lg" aria-label="Youtube">
+                                <use href="#icon-youtube"></use>
+                            </svg></a></li>
+                    <li><a href="mailto:schmit0709@gmail.com"><svg class="icon icon--lg" aria-label="Mail">
+                                <use href="#icon-mail"></use>
+                            </svg></a></li>
+                    <li><a href="https://www.linkedin.com/in/elliot-schmit-5372b1441/" target="_blank"><svg class="icon icon--lg" aria-label="Linkedin">
+                                <use href="#icon-linkedin"></use>
+                            </svg></a></li>
+                    <li><a href="https://github.com/ElliotSchmit" target="_blank"><svg class="icon icon--lg" aria-label="Github">
+                                <use href="#icon-github"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+
+            <p>Tous droits réservés Elliot Schmit 2026.</p>
+            <p>Aucune IA n'a été utilisée pour la création du portfolio.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
